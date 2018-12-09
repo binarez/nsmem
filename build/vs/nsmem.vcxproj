@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\nsmem\Allocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\BlockAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\CountingLeakTracker.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\CsvLogFormater.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\DefaultLogFormater.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\FileLogStream.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\BoundsGuard.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\LogInfo.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\NoBoundsCheck.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\NullLogStream.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\PrintfLogStream.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\SyslogLogStream.hpp" />
+    <ClInclude Include="..\..\src\nsmem\debug\Win32LogStream.hpp" />
+    <ClInclude Include="..\..\src\nsmem\NullAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\SmallBlocksAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\CircularAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\DebugAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\DoubleLifoAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\DLHeapAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\LifoAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\LifoBackAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\MallocHeapAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\mem.hpp" />
+    <ClInclude Include="..\..\src\nsmem\mem_sysfail.hpp" />
+    <ClInclude Include="..\..\src\nsmem\mem_defines.hpp" />
+    <ClInclude Include="..\..\src\nsmem\mem_impl.hpp" />
+    <ClInclude Include="..\..\src\nsmem\PoolAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\SequentialAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\SequentialBackAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\StackFrameAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\StlAllocator.hpp" />
+    <ClInclude Include="..\..\src\nsmem\VirtualImpl.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\nsmem\CircularAllocator.cpp" />
+    <ClCompile Include="..\..\src\nsmem\DLHeapAllocator.cpp" />
+    <ClCompile Include="..\..\src\nsmem\SmallBlocksAllocator.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}</ProjectGuid>
+    <RootNamespace>mem</RootNamespace>
+    <ProjectName>nsmem</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\temp\vs\nsmem\debug\</IntDir>
+    <TargetName>nsmem_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\temp\vs\nsmem\release\</IntDir>
+    <TargetName>nsmem</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>..\..\src\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>KULT_DEBUG;NSMEM_DEBUG;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>..\..\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

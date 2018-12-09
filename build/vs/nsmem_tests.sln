@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nsmem_tests", "nsmem_tests.vcxproj", "{BDBCE2FE-972F-464D-8B3F-53B13C9827D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nsmem", "nsmem.vcxproj", "{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDBCE2FE-972F-464D-8B3F-53B13C9827D8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BDBCE2FE-972F-464D-8B3F-53B13C9827D8}.Debug|Win32.Build.0 = Debug|Win32
+		{BDBCE2FE-972F-464D-8B3F-53B13C9827D8}.Release|Win32.ActiveCfg = Release|Win32
+		{BDBCE2FE-972F-464D-8B3F-53B13C9827D8}.Release|Win32.Build.0 = Release|Win32
+		{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}.Debug|Win32.Build.0 = Debug|Win32
+		{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}.Release|Win32.ActiveCfg = Release|Win32
+		{047E50E5-130B-4FD6-BD4E-09F3D4DC3BDF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
