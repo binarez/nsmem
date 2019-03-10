@@ -1,4 +1,4 @@
-// TODO : finish this damn library. Looking for collaborators.
+// TODO : finish this damn library. Looking for collaborators. Some of the code is crap because I worked on this over many years.
 
 # nsmem
 namespace mem
